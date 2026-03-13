@@ -1,12 +1,5 @@
 # PROYECTO DELITOS INFORMATICOS
 
-Perfecto, convertí tu documento a **formato Markdown (.md) listo para GitHub** manteniendo una estructura limpia con encabezados, listas y tabla.
-El contenido proviene de tu archivo: 
-
-Puedes copiarlo directamente como `README.md` o como archivo `.md` en tu repositorio.
-
----
-
 # Caracterización de la Fuente de Datos
 
 ## 1. Origen de los datos
