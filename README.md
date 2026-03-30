@@ -1,4 +1,55 @@
-# PROYECTO DELITOS INFORMATICOS
+# Proyecto ETL Final - Gestión y Almacenamiento de Datos
+<div style="opacity: 0.5; font-style: italic; background-color: #f5f5f5; padding: 10px; border-left: 4px solid #999;">
+
+Presentado por: Jean Paul Delgado Jurado, Stephania Barrera Cespedes, Verónica Girón Arias, Luis Miguel Porras Gaviria.
+Especialización en Analítica de Big Data
+2026-1S
+
+</div>
+
+ETL en Python para datos de delitos informaticos en Colombia.
+
+## Etapas implementadas
+
+- Extraccion robusta desde CSV (`src/extract.py`)
+- Transformacion base y de negocio (`src/transform.py`)
+- Carga dinamica a PostgreSQL con SQLAlchemy (`src/load.py`)
+- Orquestacion E2E y medición de tiempos (`src/pipeline.py`)
+- Pruebas y calidad basicas (`tests/`, `pytest`, `ruff`)
+
+## Prerrequisitos
+
+- Python 3.10+
+- Entorno virtual activo en `venv/`
+- PostgreSQL (opcional para `src/load.py` o `src/pipeline.py` completo)
+
+## Comandos rapidos
+
+```powershell
+# Instalar/actualizar dependencias
+.\venv\Scripts\python.exe -m pip install -r requirements.txt
+
+# Ejecutar pipeline completo
+.\venv\Scripts\python.exe -u src\pipeline.py
+
+# Ejecutar pruebas
+.\venv\Scripts\python.exe -m pytest -q
+
+# Cobertura de pruebas
+.\venv\Scripts\python.exe -m pytest --cov=src --cov-report=term-missing
+
+# Lint
+.\venv\Scripts\python.exe -m ruff check src tests
+```
+
+## Variables de entorno
+
+El script `src/load.py` usa el archivo `.env` en la **raiz** del proyecto.
+Puedes basarte en `.env.example`.
+
+## Datos
+
+Una copia de los datos usados se deja listo en el directorio `data/raw`, pero más adelante se indica de dónde puede descargarlos directamente de la fuente como archivo CSV si así lo desea.
 
 # Caracterización de la Fuente de Datos
 
